@@ -9,8 +9,8 @@ double luas_segiempat(double panjang, double lebar) {
 main(List<String> args) {
   double p, l, luas;
 
-  p = double.parse(stdin.readLineSync());
-  l = double.parse(stdin.readLineSync());
+  p = double.tryParse(stdin.readLineSync());
+  l = double.tryParse(stdin.readLineSync());
 
   luas = luas_segiempat(p, l);
 
