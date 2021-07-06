@@ -1,6 +1,8 @@
 import 'dart:io';
+import 'package:lat/drink_ability_mixin.dart';
 import 'package:lat/flying_monster.dart';
 import 'package:lat/hero.dart';
+import 'package:lat/knight.dart';
 import 'package:lat/monster.dart';
 import 'package:lat/monster_kecoa.dart';
 import 'package:lat/monster_ubur_ubur.dart';
@@ -14,23 +16,26 @@ main(List<String> arguments) {
 
   List<Monster> monsters = [];
 
-  monsters.add(MonsterUburUbur());
-  monsters.add(MonsterKecoa());
-  monsters.add(MonsterUcoa());
+  Knight q = Knight();
+  print(q.drink());
+  // monsters.add(MonsterUburUbur());
+  // monsters.add(MonsterKecoa());
+  // monsters.add(MonsterUcoa());
 
-  //h.healthPoint = -10;
-  // u.healthPoint = 10;
+  // //h.healthPoint = -10;
+  // // u.healthPoint = 10;
 
-  // print("hero HP: " + h.healthPoint.toString());
-  // print("Monster HP: " + u.healthPoint.toString());
-  // print(h.killAllMonster());
-  // print(m.eatHuman());
+  // // print("hero HP: " + h.healthPoint.toString());
+  // // print("Monster HP: " + u.healthPoint.toString());
+  // // print(h.killAllMonster());
+  // // print(m.eatHuman());
 
-  for (Monster m in monsters) {
-    if (m is FlyingMonster) {
-      // if (m is MonsterUburUbur) {
-      print((m as FlyingMonster).fly());
-      //}
-    }
-  }
+  // for (Monster m in monsters) {
+  //   if (m is DrinkAbilityMixin) {
+  //     print((m as DrinkAbilityMixin).drink());
+  //     // if (m is MonsterUburUbur) {
+  //     // print((m as FlyingMonster).fly());
+  //     //}
+  //   }
+  // }
 }

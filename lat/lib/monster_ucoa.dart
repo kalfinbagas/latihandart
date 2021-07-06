@@ -1,3 +1,4 @@
+import 'package:lat/drink_ability_mixin.dart';
 import 'package:lat/flying_monster.dart';
 import 'package:lat/monster_ubur_ubur.dart';
 
