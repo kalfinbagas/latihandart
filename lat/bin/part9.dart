@@ -1,8 +1,10 @@
 import 'dart:io';
+import 'package:lat/flying_monster.dart';
 import 'package:lat/hero.dart';
 import 'package:lat/monster.dart';
 import 'package:lat/monster_kecoa.dart';
 import 'package:lat/monster_ubur_ubur.dart';
+import 'package:lat/monster_ucoa.dart';
 
 main(List<String> arguments) {
   Hero h = Hero();
@@ -14,7 +16,7 @@ main(List<String> arguments) {
 
   monsters.add(MonsterUburUbur());
   monsters.add(MonsterKecoa());
-  monsters.add(MonsterUburUbur());
+  monsters.add(MonsterUcoa());
 
   //h.healthPoint = -10;
   // u.healthPoint = 10;
@@ -25,8 +27,10 @@ main(List<String> arguments) {
   // print(m.eatHuman());
 
   for (Monster m in monsters) {
-    // if (m is MonsterUburUbur) {
-    print(m.move());
-    //}
+    if (m is FlyingMonster) {
+      // if (m is MonsterUburUbur) {
+      print((m as FlyingMonster).fly());
+      //}
+    }
   }
 }
